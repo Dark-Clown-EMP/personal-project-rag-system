@@ -1,9 +1,11 @@
 # --- AI & RAG Core ---
 llama-index
 llama-index-llms-ollama
+llama-index-llms-groq
 llama-index-embeddings-huggingface
 llama-index-vector-stores-chroma
 chromadb
+llama-parse
 rank_bm25
 sentence-transformers
 nltk
@@ -14,3 +16,4 @@ fastapi
 uvicorn
 pydantic
 python-multipart
+python-dotenv
