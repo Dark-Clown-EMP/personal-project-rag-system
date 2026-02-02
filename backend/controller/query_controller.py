@@ -16,7 +16,6 @@ async def ask_question(request: Request, query_data: QueryRequest):
 
 @router.post("/feedback")
 async def submit_feedback(feedback_data: FeedbackRequest):
-    #TODO: Need to debug this api
     """
     Endpoint to save user feedback.
     """

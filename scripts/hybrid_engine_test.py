@@ -4,7 +4,7 @@ import os
 # --- PATH HACK (To find 'core') ---
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from core.engine import HybridRetriever
+from backend.core.engine import HybridRetriever
 import chromadb
 from llama_index.core import Settings, get_response_synthesizer, PromptTemplate
 from llama_index.core.query_engine import RetrieverQueryEngine
@@ -36,7 +36,7 @@ citation_prompt_str = (
 
 def run_test():
     print("--- 1. LOADING RESOURCES (Using GPU if available) ---")
-    # Llama 3 is required here. Gemma is too small to follow complex citation rules.
+    # Llama 3 is required here.
     llm = Ollama(model="llama3", request_timeout=360.0)
     
     embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")

@@ -9,7 +9,7 @@ class FeedbackService:
             cursor = conn.cursor()
             cursor.execute(
                 "INSERT INTO feedback (user_query, ai_response, rating) VALUES (?, ?, ?)",
-                (data.query, data.response, data.rating)
+                (data.query, data.answer, data.rating)
             )
             conn.commit()
             conn.close()
